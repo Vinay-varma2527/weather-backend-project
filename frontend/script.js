@@ -1,7 +1,7 @@
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
 const weatherResult = document.getElementById("weatherResult");
-const apiBaseUrl = window.WEATHER_API_URL || "http://localhost:5000";
+const apiBaseUrl = window.WEATHER_API_URL || "https://weather-backend-project.onrender.com";
 
 searchBtn.addEventListener("click", async () => {
     const city = cityInput.value.trim();
