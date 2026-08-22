@@ -1,6 +1,7 @@
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
 const weatherResult = document.getElementById("weatherResult");
+const apiBaseUrl = window.WEATHER_API_URL || "http://localhost:5000";
 
 searchBtn.addEventListener("click", async () => {
     const city = cityInput.value.trim();
@@ -16,7 +17,7 @@ searchBtn.addEventListener("click", async () => {
 
     try {
         const response = await fetch(
-            `http://localhost:5000/weather?city=${encodeURIComponent(city)}`
+            `${apiBaseUrl}/weather?city=${encodeURIComponent(city)}`
         );
 
         const data = await response.json();
